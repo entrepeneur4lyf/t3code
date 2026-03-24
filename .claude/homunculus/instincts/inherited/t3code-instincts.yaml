@@ -1,0 +1,378 @@
+# Instincts generated from https://github.com/entrepeneur4lyf/t3code
+# Generated: 2026-03-24T19:54:06.114Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: t3code-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/entrepeneur4lyf/t3code
+---
+
+# T3code Commit Length
+
+## Action
+
+Write moderate-length commit messages (~55 characters)
+
+## Evidence
+
+- Average commit message length: 55 chars
+- Based on 200 commits
+
+---
+id: t3code-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/entrepeneur4lyf/t3code
+---
+
+# T3code Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: t3code-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/entrepeneur4lyf/t3code
+---
+
+# T3code Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: t3code-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/entrepeneur4lyf/t3code
+---
+
+# T3code Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: t3code-arch-type-based
+trigger: "when adding new code"
+confidence: 0.8
+domain: architecture
+source: repo-analysis
+source_repo: https://github.com/entrepeneur4lyf/t3code
+---
+
+# T3code Arch Type Based
+
+## Action
+
+Place code in the appropriate type folder (components/, services/, utils/, etc.)
+
+## Evidence
+
+- Type-based module organization detected
+- Folders: 
+
+---
+id: t3code-test-framework
+trigger: "when writing tests"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/entrepeneur4lyf/t3code
+---
+
+# T3code Test Framework
+
+## Action
+
+Use vitest as the test framework
+
+## Evidence
+
+- Test framework detected: vitest
+- File pattern: *.test.ts
+
+---
+id: t3code-test-naming
+trigger: "when creating a test file"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/entrepeneur4lyf/t3code
+---
+
+# T3code Test Naming
+
+## Action
+
+Name test files using the pattern: *.test.ts
+
+## Evidence
+
+- File pattern: *.test.ts
+- Consistent across test files
+
+---
+id: t3code-test-mocking
+trigger: "when mocking dependencies in tests"
+confidence: 0.75
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/entrepeneur4lyf/t3code
+---
+
+# T3code Test Mocking
+
+## Action
+
+Use msw for mocking
+
+## Evidence
+
+- Mocking pattern detected: msw
+- Consistent across test files
+
+---
+id: t3code-test-types
+trigger: "when planning tests for a feature"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/entrepeneur4lyf/t3code
+---
+
+# T3code Test Types
+
+## Action
+
+Write unit, integration tests to match project standards
+
+## Evidence
+
+- Test types detected: unit, integration
+- Coverage config: no
+
+---
+id: t3code-workflow-feature-development
+trigger: "when implementing a new feature"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/entrepeneur4lyf/t3code
+---
+
+# T3code Workflow Feature Development
+
+## Action
+
+Follow the feature-development workflow:
+1. Add feature implementation
+2. Add tests for feature
+3. Update documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~9x per month
+- Files: apps/web/src/*, apps/web/src/components/*, apps/web/src/components/ui/*
+
+---
+id: t3code-workflow-test-driven-development
+trigger: "when adding new functionality"
+confidence: 0.7
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/entrepeneur4lyf/t3code
+---
+
+# T3code Workflow Test Driven Development
+
+## Action
+
+Follow the test-driven-development workflow:
+1. Write failing test
+2. Implement code to pass test
+3. Refactor if needed
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~4x per month
+- Files: **/*.test.*, **/*.spec.*, src/**/*
+
+---
+id: t3code-workflow-feature-or-settings-development-with-tests-and-docs
+trigger: "when doing feature or settings development with tests and docs"
+confidence: 0.7
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/entrepeneur4lyf/t3code
+---
+
+# T3code Workflow Feature Or Settings Development With Tests And Docs
+
+## Action
+
+Follow the feature-or-settings-development-with-tests-and-docs workflow:
+1. Implement feature logic in main code file(s)
+2. Update or add corresponding test files
+3. Update UI components as needed
+4. Update documentation or settings files if applicable
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~4x per month
+- Files: apps/web/src/appSettings.ts, apps/web/src/appSettings.test.ts, apps/web/src/components/ChatView.tsx
+
+---
+id: t3code-workflow-backend-adapter-or-provider-enhancement-with-tests
+trigger: "when doing backend adapter or provider enhancement with tests"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/entrepeneur4lyf/t3code
+---
+
+# T3code Workflow Backend Adapter Or Provider Enhancement With Tests
+
+## Action
+
+Follow the backend-adapter-or-provider-enhancement-with-tests workflow:
+1. Edit provider/adapter implementation file
+2. Edit or add corresponding test file
+3. Update related orchestration or service files if needed
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: apps/server/src/provider/Layers/ClaudeAdapter.ts, apps/server/src/provider/Layers/ClaudeAdapter.test.ts, apps/server/src/provider/Layers/CodexAdapter.ts
+
+---
+id: t3code-workflow-sidebar-or-ui-component-enhancement
+trigger: "when doing sidebar or ui component enhancement"
+confidence: 0.75
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/entrepeneur4lyf/t3code
+---
+
+# T3code Workflow Sidebar Or Ui Component Enhancement
+
+## Action
+
+Follow the sidebar-or-ui-component-enhancement workflow:
+1. Edit main component file (e.g., Sidebar.tsx)
+2. Edit or add logic/test files for the component
+3. Update supporting utility or style files as needed
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~5x per month
+- Files: apps/web/src/components/Sidebar.tsx, apps/web/src/components/Sidebar.logic.ts, apps/web/src/components/Sidebar.logic.test.ts
+
+---
+id: t3code-workflow-git-service-or-action-enhancement
+trigger: "when doing git service or action enhancement"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/entrepeneur4lyf/t3code
+---
+
+# T3code Workflow Git Service Or Action Enhancement
+
+## Action
+
+Follow the git-service-or-action-enhancement workflow:
+1. Edit Git service/manager/core implementation files
+2. Edit or add corresponding test files
+3. Update related web components or API integration files
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: apps/server/src/git/Layers/GitCore.ts, apps/server/src/git/Layers/GitCore.test.ts, apps/server/src/git/Layers/GitManager.ts
+
+---
+id: t3code-workflow-release-or-package-version-bump
+trigger: "when doing release or package version bump"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/entrepeneur4lyf/t3code
+---
+
+# T3code Workflow Release Or Package Version Bump
+
+## Action
+
+Follow the release-or-package-version-bump workflow:
+1. Update version or metadata in package.json files
+2. Update lockfile (bun.lock)
+3. Optionally update release workflow files
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: apps/web/package.json, apps/server/package.json, apps/desktop/package.json
+
+---
+id: t3code-workflow-test-and-logic-pair-update
+trigger: "when doing test and logic pair update"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/entrepeneur4lyf/t3code
+---
+
+# T3code Workflow Test And Logic Pair Update
+
+## Action
+
+Follow the test-and-logic-pair-update workflow:
+1. Edit or add logic file
+2. Edit or add corresponding test file
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: apps/web/src/composerDraftStore.ts, apps/web/src/composerDraftStore.test.ts, apps/web/src/session-logic.ts
+
